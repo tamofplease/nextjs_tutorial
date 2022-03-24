@@ -6,10 +6,10 @@ const postsDirectory = path.join(process.cwd(), 'posts')
 
 export function getSortedPostsData() {
     const fileNames = fs.readdirSync(postsDirectory)
-    const allPostsData = fileNames.map(filename => {
+    const allPostsData = fileNames.map(fileName => {
         const id = fileName.replace(/\.md$/, '')
 
-        const fullpath = path.join(postsDirectory, filename)
+        const fullpath = path.join(postsDirectory, fileName)
         const fileContents = fs.readFileSync(fullpath, 'utf8')
 
         const matterResult = matter(fileContents)

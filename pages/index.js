@@ -1,3 +1,5 @@
+import Layout from "../components/layout";
+import utilStyles from '../styles/utils.module.css'
 import { getSortedPostsData } from "./posts/posts";
 
 export async function getStaticProps() {
